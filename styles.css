@@ -1,0 +1,232 @@
+/* =============================================
+   Customer Feedback Sentiment Analyzer
+   styles.css — Dark-Mode SaaS Theme
+   ============================================= */
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #111827; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+/* KPI Cards */
+.kpi-card {
+  background: #252d3d;
+  border: 1px solid #2e3a50;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.kpi-label  { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+.kpi-value  { font-size: 1.875rem; font-weight: 700; line-height: 1; margin-top: 0.25rem; }
+.kpi-sub    { font-size: 0.7rem; margin-top: 0.2rem; }
+
+/* Buttons */
+.btn-primary {
+  background: #10b981;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover  { background: #059669; }
+.btn-primary:active { background: #047857; }
+
+.btn-secondary {
+  background: #1e2533;
+  color: #d1d5db;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.4rem;
+  border: 1px solid #2e3a50;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-secondary:hover { background: #2e3a50; color: #fff; }
+
+.btn-danger {
+  background: #1e2533;
+  color: #f87171;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.4rem;
+  border: 1px solid #3b1f1f;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-danger:hover { background: #3b1f1f; color: #fca5a5; }
+
+.btn-icon-danger {
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s, background 0.15s;
+}
+.btn-icon-danger:hover { color: #f87171; background: #3b1f1f; }
+
+/* Form elements */
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-bottom: 0.35rem;
+}
+.form-input {
+  width: 100%;
+  background: #1a2030;
+  border: 1px solid #2e3a50;
+  border-radius: 0.5rem;
+  color: #e5e7eb;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.form-input::placeholder { color: #4b5563; }
+.form-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+select.form-input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
+}
+.form-error { font-size: 0.7rem; color: #f87171; margin-top: 0.25rem; }
+
+/* Result panel */
+.result-panel {
+  border-top: 1px solid #2e3a50;
+  padding-top: 1rem;
+}
+.result-metric {
+  background: #1a2030;
+  border: 1px solid #2e3a50;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.8rem;
+}
+.result-metric-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.07em; color: #6b7280; }
+.result-metric-value { font-size: 1.25rem; font-weight: 700; color: #e5e7eb; margin-top: 0.1rem; }
+
+/* Sentiment Badges */
+.sentiment-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.badge-positive { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+.badge-neutral  { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+.badge-negative { background: rgba(239, 68, 68, 0.15);  color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+
+/* Keyword chips */
+.keyword-pos {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16,185,129,0.25);
+  border-radius: 9999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+.keyword-neg {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(239,68,68,0.25);
+  border-radius: 9999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+/* Donut center label */
+.donut-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Table */
+.table-th {
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+  font-weight: 600;
+}
+tbody tr {
+  border-bottom: 1px solid #1e2533;
+  transition: background 0.1s;
+}
+tbody tr:hover { background: #1e2533; }
+td {
+  padding: 0.6rem 0.75rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #d1d5db;
+  font-size: 0.8rem;
+}
+td.td-review {
+  text-align: left;
+  max-width: 22rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Score color helpers */
+.score-pos { color: #34d399; font-weight: 600; }
+.score-neu { color: #fbbf24; font-weight: 600; }
+.score-neg { color: #f87171; font-weight: 600; }
+
+/* Category pill */
+.cat-pill {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid #2e3a50;
+  color: #9ca3af;
+  background: #1a2030;
+}
+
+/* Legend dots */
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Slide-in animation for result panel */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.result-panel.visible { animation: slideDown 0.2s ease-out; }
